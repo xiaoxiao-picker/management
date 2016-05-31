@@ -1,0 +1,30 @@
+<div class="table-container">
+	<table class="table table-hover table-main middle center">
+		<thead>
+			<tr>
+				<th class="width-60">#</th>
+				<th class="width-200">组织</th>
+				<th>操作</th>
+				<th class="width-150">时间</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{each logs as log i}}
+			<tr>
+				<td>
+					{{i | index:pagination.page,pagination.limit}}
+				</td>
+				<td>
+					{{log.organization&&log.organization.name||"未命名"}}
+				</td>
+				<td class="left">
+					{{log.content||(log.targetName+log.operationName)}}
+				</td>
+				<td>
+					{{log.createDate | makedate:'MM月dd日 hh:mm'}}
+				</td>
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
+</div>

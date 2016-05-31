@@ -1,0 +1,96 @@
+<div class="table-container">
+	<table class="table table-hover table-main middle center">
+		<thead>
+			<tr>
+				<th class="width-60">序号</th>
+				<th class="width-120">姓名</th>
+				<th class="width-150">昵称</th>
+				<th class="width-80">性别</th>
+				<th class="width-120">手机号</th>
+				<th class="width-150">邮箱</th>
+				<th class="width-150">入学时间</th>
+				<th class="width-120">学号</th>
+				<th class="width-200">学校</th>
+				<th class="width-150">学院</th>
+				<th class="width-150">现居</th>
+				<th class="width-150">家乡</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{each users as user i}}
+			<tr>
+				<td>
+					<div class="ellipsis">
+						{{i | index:pagination.page,pagination.limit}}
+					</div>
+				</td>
+				<td>
+					<div class="ellipsis">
+						{{user.name||"暂无"}}
+					</div>
+				</td>
+				<td>
+					<div class="ellipsis">
+						{{user.nickname||"暂无"}}
+					</div>
+				</td>
+				<td>
+					<div class="ellipsis">
+					{{if user.gender == "1"}}
+					男
+					{{else if user.gender == "2"}}
+					女
+					{{else}}
+					保密
+					{{/if}}
+					</div>
+				</td>
+				<td>
+					<div class="ellipsis">
+						{{user.phoneNumber||"暂无"}}
+					</div>
+				</td>
+				<td>
+					<div class="ellipsis">
+					{{user.email||"暂无"}}
+					</div>
+				</td>
+				<td>
+					<div class="ellipsis">
+					{{if user.grade}}
+						{{user.grade | makedate:'yyyy年MM月dd日'}}
+					{{else}}
+						暂无
+					{{/if}}
+					</div>
+				</td>
+				<td>
+					<div class="ellipsis">
+					{{user.studentId||"暂无"}}
+					</div>
+				</td>
+				<td>
+					<div class="ellipsis">
+					{{user.school||"暂无"}}
+					</div>
+				</td>
+				<td>
+					<div class="ellipsis">
+					{{user.campus||"暂无"}}
+					</div>
+				</td>
+				<td>
+					<div class="ellipsis">
+					{{user.address||"暂无"}}
+					</div>
+				</td>
+				<td>
+					<div class="ellipsis">
+					{{user.hometown||"暂无"}}
+					</div>
+				</td>
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
+</div>

@@ -1,0 +1,66 @@
+.table-container {
+        width: 100%;
+        overflow: auto;
+        margin-bottom: 20px;
+
+        .table {
+                margin-bottom: 0;
+        }
+}
+
+.table-main {
+        border-collapse: collapse;
+        width: 100%;
+
+        th {
+                border: 1px solid #ccc;
+                padding: 10px 6px;
+                color: #666;
+        }
+
+        td {
+                border-bottom: 1px solid #ccc;
+                padding: 6px 6px;
+
+                &.left {
+                        text-align: left;
+                }
+        }
+
+        &.middle {
+                th, td {
+                        vertical-align: middle;
+                }
+        }
+
+        &.top {
+                th, td {
+                        vertical-align: top;
+                }
+        }
+
+        &.center {
+                th, td {
+                        text-align: center;
+                }
+        }
+
+        th, td {
+                &.center {
+                        text-align: center;
+                }
+
+                &.right {
+                        text-align: right;
+                }
+
+                &.left {
+                        text-align: left;
+                }
+
+                .ellipsis {
+                        line-height: 20px;
+                        height: 20px;
+                }
+        }
+}

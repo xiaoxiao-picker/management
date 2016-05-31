@@ -1,0 +1,48 @@
+<div class="content-header">
+    <ul class="nav nav-tabs clearfix">
+        <li class="active">
+            <span>组织列表</span>
+        </li>
+    </ul>
+    <div class="buttons">
+        <div class="input-group search-xx-input" style="width:590px;">
+            <input type="text" class="form-control keyword" value="{{keyword}}" style="width:200px;" placeholder="组织名称" />
+            <select class="form-control org-type" style="width:150px;border-radius: 0;">
+                <option value="">请选择组织类型</option>
+                <option {{if orgType=="管理" }}selected{{/if}}>管理</option>
+                <option {{if orgType=="学校官方" }}selected{{/if}}>学校官方</option>
+                <option {{if orgType=="学术" }}selected{{/if}}>学术</option>
+                <option {{if orgType=="艺术" }}selected{{/if}}>艺术</option>
+                <option {{if orgType=="体育" }}selected{{/if}}>体育</option>
+                <option {{if orgType=="实践" }}selected{{/if}}>实践</option>
+                <option {{if orgType=="公益" }}selected{{/if}}>公益</option>
+                <option {{if orgType=="社团联" }}selected{{/if}}>社团联</option>
+                <option {{if orgType=="学生会" }}selected{{/if}}>学生会</option>
+                <option {{if orgType=="部门" }}selected{{/if}}>部门</option>
+                <option {{if orgType=="其他" }}selected{{/if}}>其他</option>
+            </select>
+            <input type="text" class="form-control school" style="width:200px;" value="{{schoolId}}" placeholder="所在学校" readonly data-xx-action="selectSchool" />
+            <span class="input-group-btn">
+                <button class="btn btn-default" data-xx-action="search">
+                <span class="inside-loading">
+                    <i class="fa fa-spinner rolling font-14"></i>
+                </span>
+                <span class="inside-text">
+                    <i class="fa fa-search"></i>
+                </span>
+                </button>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="content-body organization-list">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="Results">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-footer">
+    <!-- 分页 -->
+</div>

@@ -1,0 +1,28 @@
+.tags-container {
+	min-height: 30px;
+	padding: 8px 0;
+}
+
+#OrgSelectorModal {
+	.modal-content{
+		width: 700px;
+	}
+}
+.message-org-selector {
+	.target-container {
+		text-align: left;
+		height: 200px;
+		width: 100%;
+		border: 1px solid $default-border-color;
+		overflow: auto;
+		list-style: none;
+		padding: 5px 10px;
+		border-radius: $default-border-radius;
+		>li {
+			float: left;
+			width: 33.333%;
+			line-height: 20px;
+			word-break: break-all;
+		}
+	}
+}

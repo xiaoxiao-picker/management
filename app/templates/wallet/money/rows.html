@@ -1,0 +1,29 @@
+<table class="table table-hover table-main middle center">
+    <thead>
+        <tr>
+            <th class="width-50">#</th>
+            <th>组织</th>
+            <th class="width-200">取款金额/元</th>
+            <th class="width-200">操作</th>
+        </tr>
+    </thead>
+    <tbody id="Results">
+        {{each logs as log i}}
+        <tr>
+            <td>
+                <span>{{i | index:pagination.page,pagination.limit}}</span>
+            </td>
+            <td>
+                <span>{{log.org&&log.org.name}}</span>
+            </td>
+            <td>
+                <span>{{log.money}}</span>
+            </td>
+            <td>
+                <button class="btn btn-xx-sm btn-xx-green" data-value="{{log.id}}" data-xx-action="approve">同意</button>
+                <button class="btn btn-xx-sm btn-xx-red" data-value="{{log.id}}" data-xx-action="reject">拒绝</button>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

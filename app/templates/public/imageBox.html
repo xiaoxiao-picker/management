@@ -1,0 +1,60 @@
+<!-- 图片上传裁剪 -->
+<!-- Modal -->
+<div class="modal fade" id="ImageBox" tabindex="-1" role="dialog" aria-labelledby="{{modalName}}Label" aria-hidden="true">
+	<div class="modal-dialog  image-box-modal">
+		<div class="modal-content">
+			<div class="modal-header xx-modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">&times;</span>
+					<span class="sr-only">Close</span>
+				</button>
+				<h4>{{title||"图片上传"}}</h4>
+			</div>
+			<div class="modal-body xx-modal-body">
+				<div class="clearfix {{orientation}}">
+					<div class="image-box">
+						<h5 class="xx-inner-title">
+							<span class="xx-title">原始图片</span>
+						</h5>
+						<div class="image">
+							{{if !image}}
+							<p class="tips">请上传图片</p>
+							{{/if}}
+							<img id="ImageBox_Image" src="{{image}}" />
+						</div>
+						<div>
+							<div id="ImageBox_Progress">
+								<div class="loader-container hide">
+									<div class="meter">0</div>
+									<span class="runner"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="preview-box">
+						<h5 class="xx-inner-title">
+							<span class="xx-title">预览</span>
+						</h5>
+						<div class="preview">
+							<div id="preview-pane" class="{{if jcrop.borderRadius}}radius{{/if}}">
+								<div class="preview-container {{if jcrop.borderRadius}}radius{{/if}}" border="0" style="width:{{jcrop.previewWidth}}px;height:{{jcrop.previewHeight}}px;line-height:{{jcrop.previewHeight}}px;">
+									<img id="ImageBox_Image_Preview" class="jcrop-preview" src="{{image}}" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="buttons center">
+						<input type="file" id="ImageBox_ImageUpload"  />
+						<button id="ImageBox_Btn_Save" class="btn btn-xx-green save" data-xx-action="{{action}}" data-value1="{{value1}}" data-value2="{{value2}}" data-value3="{{value3}}">
+							<span class="inside-loading"> <i class="fa fa-spinner rolling font-18"></i>
+							</span>
+							<span class="inside-text">确定</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,26 @@
+.auth-list {
+    .input-search {
+        display: inline-block;
+        height: 32px;
+    }
+    .btn-padding {
+        padding: 6px 15px;
+    }
+    .btn-float-right {
+        float: right;
+    }
+}
+.auth-modal{
+    .options-wrapper {
+        .checkbox-option {
+            float: left;
+            width: 25%;
+            line-height: 30px;
+            height: 30px;
+            overflow: hidden;
+        }
+    }
+	.btn-save {
+		margin-top:20px;
+	}
+}

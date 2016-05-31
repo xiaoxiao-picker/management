@@ -1,0 +1,38 @@
+<div class="content-header">
+    <ul class="nav nav-tabs clearfix">
+        <li class="active">
+            <span>验证码查询</span>
+        </li>
+    </ul>
+</div>
+<div class="content-body">
+    <form style="padding: 0 20px;">
+        <div class="row">
+            <h4>手机号</h4>
+            <div class="form-group width-300">
+                <input id="PHONE" class="form-control" value="" placeholder="" />
+            </div>
+        </div>
+        <div class="row">
+            <h4>操作类型</h4>
+            <div class="form-group width-300">
+                <select class="form-control target-type" id="TYPE">
+                    <option value="LOGIN">登录</option>
+                    <option value="RESET_PASSWORD">修改密码</option>
+                    <option value="RESET_PHONE_NUMBER">修改手机号</option>
+                    <option value="ATTENTION">投票关注</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <button class="btn btn-xx-green" data-xx-action="check">
+            <span class="inside-loading">
+                <i class="fa fa-spinner rolling font-14"></i>
+            </span>
+            <span class="inside-text">
+                查询
+            </span>
+            </button>
+        </div>
+    </form>
+</div>

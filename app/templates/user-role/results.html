@@ -1,0 +1,36 @@
+<table class="table table-hover table-main middle center">
+	<thead>
+		<tr>
+			<th class="width-60">序号</th>
+			<th>姓名</th>
+			<th>昵称</th>
+			<th>手机</th>
+			<th>角色</th>
+			<th class="width-120">操作</th>
+		</tr>
+	</thead>
+	<tbody >
+		{{each users as user i}}
+		<tr>
+			<td>{{i | index:pagination.page,pagination.limit}}</td>
+			<td>
+				<a href="javascript:void(0);" data-value="{{user.id}}" data-xx-action="showUser" title="{{user.name}}">{{user.name||"暂无"}}</a>
+			</td>
+			<td>
+				<a href="javascript:void(0);" data-value="{{user.id}}" data-xx-action="showUser" title="{{user.nickname}}">{{user.nickname||"无昵称"}}</a>
+			</td>
+			<td>
+				<span title="{{user.tel}}">{{user.phoneNumber||"暂无"}}</span>
+			</td>
+			<td>
+				{{each user.roles as role j}}
+				<span class="label label-default label-sm">{{role.name}}</span>
+				{{/each}}
+			</td>
+			<td>
+				<button class="btn btn-xx-sm btn-xx-green" data-value="{{user.id}}" data-xx-action="showRoles">角色设置</button>
+			</td>
+		</tr>
+		{{/each}}
+	</tbody>
+</table>

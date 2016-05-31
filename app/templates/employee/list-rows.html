@@ -1,0 +1,53 @@
+<div class="table-container">
+	<table class="table table-hover table-main middle center">
+		<thead>
+			<tr>
+				<th class="width-60">#</th>
+				<th>姓名</th>
+				<th class="width-200">联系方式</th>
+				<th class="width-200">入职日期</th>
+				<th class="width-250">操作</th>
+				<th class="width-150">KPI</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{each employees as employee i}}
+			<tr>
+				<td>
+					<div class="ellipsis">{{i | index:pagination.page,pagination.limit}}</div>
+				</td>
+				<td>
+					{{employee.name}}
+				</td>
+				<td>
+					{{employee.contactInfo&&employee.contactInfo.phoneNumber}}
+				</td>
+				<td>
+					{{employee.entryDate | makedate:'yyyy年MM月dd日'}}
+				</td>
+				<td>
+					<button class="btn btn-xx-green btn-xx-sm" data-value="{{employee.id}}" data-xx-action="openOrganizations">
+						管理组织
+					</button>
+					<button class="btn btn-xx-green btn-xx-sm" data-value="{{employee.id}}" data-xx-action="openEmployeeModal">
+						编辑
+					</button>
+					<button class="btn btn-xx-red btn-xx-sm" data-value="{{employee.id}}" data-xx-action="remove">
+						<span class="inside-loading"> 
+		                    <i class="fa fa-spinner rolling font-14"></i>
+		                </span>
+		                <span class="inside-text"> 
+		                    删除
+		                </span>
+					</button>
+				</td>
+				<td>
+					<a class="btn btn-xx-green btn-xx-sm" style="color: #fff;" href="#log/list?type=EMPLOYEE&eid={{employee.id}}">
+						查看详情
+					</a>
+				</td>
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
+</div>

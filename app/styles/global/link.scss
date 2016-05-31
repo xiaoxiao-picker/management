@@ -1,0 +1,16 @@
+// A标签
+a {
+	text-decoration: none;
+	&.link-signup {
+		color: #3fcdfc;
+		&:hover {
+			color: #2ebce8;
+		}
+	}
+	&.link-white {
+		color: #fff;
+		&:hover {
+			color: #ddd;
+		}
+	}
+}

@@ -1,0 +1,210 @@
+// image buttons named by pk
+.pk {
+	display: inline-block;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	background-size: cover;
+	// 右箭头
+	&.pk-arrow-right {
+		background-image: url('./../images/buttons/arrow-right.png');
+		width: 20px;
+		height: 20px;
+	}
+	// loading
+	&.pk-spinner{
+		background-image:url('./../images/buttons/loading.png');
+		width: 20px;
+		height: 20px;
+	}
+	// vote label
+	&.pk-vote{
+		background-image:url('./../images/buttons/vote.png');
+		width: 24px;
+		height: 16px;
+	}
+	// ticket label
+	&.pk-ticket{
+		background-image:url('./../images/buttons/ticket.png');
+		width: 24px;
+		height: 16px;
+	}
+	// heart
+	&.pk-heart{
+		background-image:url('./../images/buttons/heart.png');
+		width: 16px;
+		height: 14px;
+	}
+	&.pk-white-heart{
+		background-image:url('./../images/buttons/heart_white.png');
+		width: 16px;
+		height: 14px;
+	}
+	&.pk-empty-heart{
+		background-image:url('./../images/buttons/heart_empty.png');
+		width: 16px;
+		height: 14px;
+	}
+	&.pk-white-empty-heart{
+		background-image:url('./../images/buttons/heart_white_empty.png');
+		width: 16px;
+		height: 14px;
+	}
+	
+	// flag
+	&.pk-flag{
+		background-image:url('./../images/buttons/flag.png');
+		width: 14px;
+		height: 16px;
+	}
+	&.pk-empty-flag{
+		background-image:url('./../images/buttons/flag_empty.png');
+		width: 14px;
+		height: 16px;
+	}
+
+	&.pk-left{
+		background-image:url('./../images/buttons/left.png');
+		width: 16px;
+		height: 28px;
+	}
+	&.pk-right{
+		background-image:url('./../images/buttons/right.png');
+		width: 16px;
+		height: 28px;
+	}
+
+	// user
+	&.pk-user{
+		background-image:url('./../images/buttons/user.svg');
+		width: 14px;
+		height: 14px;
+	}
+	&.pk-clock{
+		background-image:url('./../images/buttons/clock.svg');
+		width: 14px;
+		height: 14px;
+	}
+	&.pk-pin{
+		background-image:url('./../images/buttons/pin.svg');
+		width: 14px;
+		height: 14px;
+	}
+	&.pk-tags{
+		background-image:url('./../images/buttons/tags.svg');
+		width: 14px;
+		height: 14px;
+	}
+
+	
+	&.pk-home-black{
+		background-image:url('./../images/buttons/home_black.svg');
+		width: 25px;
+		height: 25px;
+	}
+	&.pk-home-white{
+		background-image:url('./../images/buttons/home_white.svg');
+		width: 25px;
+		height: 25px;
+	}
+	&.pk-home-green{
+		background-image:url('./../images/buttons/home_green.svg');
+		width: 25px;
+		height: 25px;
+	}
+	&.pk-me-black{
+		background-image:url('./../images/buttons/me_black.svg');
+		width: 25px;
+		height: 25px;
+	}
+	&.pk-me-white{
+		background-image:url('./../images/buttons/me_white.svg');
+		width: 25px;
+		height: 25px;
+	}
+	&.pk-me-green{
+		background-image:url('./../images/buttons/me_green.svg');
+		width: 25px;
+		height: 25px;
+	}
+	&.pk-history-black{
+		background-image:url('./../images/buttons/history_black.svg');
+		width: 25px;
+		height: 25px;
+	}
+	&.pk-history-white{
+		background-image:url('./../images/buttons/history_white.svg');
+		width: 25px;
+		height: 25px;
+	}
+	&.pk-history-green{
+		background-image:url('./../images/buttons/history_green.svg');
+		width: 25px;
+		height: 25px;
+	}
+
+	//评论
+	&.pk-gray-chat {
+		background-image:url('./../images/buttons/chat-gray.png');
+		width: 20px;
+		height: 17px;
+	}
+	&.pk-white-chat-small {
+		background-image:url('./../images/buttons/chat-white-small.png');
+		width: 12px;
+		height: 10px;
+	}
+
+	//plus
+	&.pk-white-plus {
+		background-image:url('./../images/buttons/plus_white.png');
+		width: 20px;
+		height: 20px;
+	}
+	//setting
+	&.pk-white-setting {
+		background-image:url('./../images/buttons/setting_white.png');
+		width: 20px;
+		height: 20px;
+	}
+
+
+	// event tags
+	&.pk-tag-jiangzuo {
+		background-image:url('./../images/tags/tag_jiangzuo.png');
+		width: 25px;
+		height: 35px;
+	}
+	&.pk-tag-bisai {
+		background-image:url('./../images/tags/tag_bisai.png');
+		width: 25px;
+		height: 35px;
+	}
+	&.pk-tag-gongyi {
+		background-image:url('./../images/tags/tag_gongyi.png');
+		width: 25px;
+		height: 35px;
+	}
+	&.pk-tag-zhaoxin {
+		background-image:url('./../images/tags/tag_zhaoxin.png');
+		width: 25px;
+		height: 35px;
+	}
+	&.pk-tag-juhui {
+		background-image:url('./../images/tags/tag_juhui.png');
+		width: 25px;
+		height: 35px;
+	}
+	&.pk-tag-yanchu {
+		background-image:url('./../images/tags/tag_yanchu.png');
+		width: 25px;
+		height: 35px;
+	}
+	&.pk-tag-qita {
+		background-image:url('./../images/tags/tag_qita.png');
+		width: 25px;
+		height: 35px;
+	}
+
+}

@@ -1,0 +1,23 @@
+<div class="role-editor-modal">
+	<div class="row">
+		<div class="form-group">
+			<div class="options-wrapper clearfix">
+				{{each operations as operation }}
+				<div class="checkbox-option">
+					<label title="{{operation.name}}">
+						<input type="checkbox" name="operation" value="{{operation.code}}" {{if operation.selected}}checked{{/if}} />
+						<span>{{operation.name}}</span>
+					</label>
+				</div>
+				{{/each}}
+			</div>
+		</div>
+	</div>
+	<div class="row buttons center">
+		<button class="btn btn-xx-green btn-save">
+			<span class="inside-loading"> <i class="fa fa-spinner rolling font-14"></i>
+			</span>
+			<span class="inside-text">确定</span>
+		</button>
+	</div>
+</div>

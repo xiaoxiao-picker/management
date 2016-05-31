@@ -1,0 +1,31 @@
+<div class="content-header">
+    <ul class="nav nav-tabs clearfix">
+        <li class="active">
+            <span>角色管理</span>
+        </li>
+    </ul>
+    <div class="buttons">
+        <button class="btn btn-xx-green btn-xx-sm" data-xx-action="openEditModal" data-value="0">新建角色</button>
+    </div>
+</div>
+<div class="content-body auth-list">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-hover table-main middle">
+                <thead>
+                    <tr>
+                        <th class="width-60">#</th>
+                        <th>角色</th>
+                        <th>描述</th>
+                        <th class="width-200">操作</th>
+                    </tr>
+                </thead>
+                <tbody id="Results">
+                    <tr>
+                        <td colspan="4">{{include './../public/loading'}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

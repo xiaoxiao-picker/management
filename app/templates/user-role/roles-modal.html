@@ -1,0 +1,17 @@
+<div class="options-wrapper clearfix">
+	{{each roles as role i}}
+	<div class="checkbox-option">
+		<label>
+			<input type="checkbox" name="role" value="{{role.id}}" {{if role.selected}}checked{{/if}} />
+			<span>{{role.name}}</span>
+		</label>
+	</div>
+	{{/each}}
+</div>
+<div class="center">
+	<button class="btn btn-xx-green btn-save">
+		<span class="inside-loading"> <i class="fa fa-spinner rolling font-14"></i>
+		</span>
+		<span class="inside-text">确认</span>
+	</button>
+</div>

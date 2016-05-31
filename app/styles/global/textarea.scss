@@ -1,0 +1,13 @@
+.xx-textarea {
+	background-color: $default-background-color;
+	border: 1px solid $default-border-color;
+	padding: 6px 5px;
+	display: block;
+	resize: none;
+	border-radius: $default-border-radius;
+	line-height: 20px;
+	width: 480px;
+	&:focus {
+		outline: none;
+	}
+}

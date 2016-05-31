@@ -1,0 +1,8 @@
+{{each targets as target i}}
+<div class="xx-tag-wrapper xx-blue">
+	<label class="xx-tag" data-value="" data-xx-action="">{{target.name||"未知"}}</label>
+	<span class="xx-tag-btn xx-tag-del" data-value="{{target.id}}" data-xx-action="removeTargets">
+		<i class="fa fa-minus-circle"></i>
+	</span>
+</div>
+{{/each}}

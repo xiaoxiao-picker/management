@@ -1,0 +1,17 @@
+{{each roles as role i}}
+<tr>
+    <td class="center">{{i | index:pagination.page,pagination.limit}}</td>
+    <td class="center">{{role.name}}</td>
+    <td>{{role.remark}}</td>
+    <td class="center">
+        <button class="btn btn-sm btn-xx-green" data-value="{{role.id}}" data-xx-action="openOperationsEditModal">权限设置</button>
+        <button class="btn btn-sm btn-xx-green" data-value="{{role.id}}" data-xx-action="openEditModal">编辑</button>
+        <button class="btn btn-sm btn-xx-red" data-value="{{role.id}}" data-xx-action="removeRole">
+        	<span class="inside-loading"> 
+        		<i class="fa fa-spinner rolling font-14"></i>
+			</span>
+			<span class="inside-text">删除</span>
+        </button>
+    </td>
+</tr>
+{{/each}}

@@ -1,0 +1,33 @@
+<div class="content-header">
+	<ul class="nav nav-tabs clearfix">
+		<li class="active">
+			<span>用户权限管理</span>
+		</li>
+	</ul>
+	<div class="buttons">
+		<div class="input-group search-xx-input">
+			<input id="KW_NAME" type="text" class="form-control" placeholder="姓名" style="width:150px;">
+			<input id="KW_PHONE" type="text" class="form-control" placeholder="手机号" style="width:150px;">
+			<input id="KW_NICK" type="text" class="form-control" placeholder="昵称" style="width:150px;">
+			<span class="input-group-btn">
+				<button class="btn btn-default" data-xx-action="search">
+				<span class="inside-loading"> <i class="fa fa-spinner rolling font-14"></i>
+				</span>
+				<span class="inside-text"><i class="fa fa-search"></i></span>
+				</button>
+			</span>
+		</div>
+	</div>
+</div>
+<div class="content-body auth-list">
+	<div class="row">
+		<div class="col-md-12">
+			<div id="ResultUsers">
+				{{include './../public/loading'}}
+			</div>
+		</div>
+	</div>
+</div>
+<div class="content-footer">
+    <!-- 分页 -->
+</div>

@@ -1,0 +1,21 @@
+<div class="content-header">
+	<ul class="nav nav-tabs clearfix">
+		<li {{if type=='NOTICE'}}class="active"{{/if}}>
+			<a href="#message/send?type=NOTICE">
+				系统公告
+			</a>
+		</li>
+		<li {{if type=='MESSAGE'}}class="active"{{/if}}>
+			<a href="#message/send?type=MESSAGE">
+				系统通知
+			</a>
+		</li>
+	</ul>
+</div>
+<div class="content-body">
+	{{if type=="NOTICE"}}
+	{{include './edit-notice'}}
+	{{else}}
+	{{include './edit-message'}}
+	{{/if}}
+</div>

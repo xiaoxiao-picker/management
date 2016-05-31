@@ -1,0 +1,334 @@
+//default btn
+$default-btn-background-color: #f2f2f2;
+$default-btn-background-color-deep: #eee;
+$default-btn-color: #000;
+// success btn
+$success-btn-background-color: #f2f2f2;
+$success-btn-background-color-deep: #eee;
+$success-btn-color: #000;
+//theme btn
+$theme-btn-background-color: #3fcdfc;
+$theme-btn-background-color-deep: #148C44;
+$theme-btn-color: #fff;
+$theme-btn-border-color: #1da9d3;
+//green btn
+$green-btn-background-color: #5bd18b;
+$green-btn-background-color-deep: #148C44;
+$green-btn-color: #fff;
+$green-btn-border-color: #5bd18b;
+//blue btn
+$blue-btn-background-color: #427bf7;
+$blue-btn-background-color-deep: #235ddb;
+$blue-btn-color: #fff;
+$blue-btn-border-color: #1da9d3;
+//skyblue btn
+$skyblue-btn-background-color: #62c6f5;
+$skyblue-btn-background-color-deep: #54b7e5;
+$skyblue-btn-color: #fff;
+$skyblue-btn-border-color: #1da9d3;
+//gray btn
+$gray-btn-background-color: #3a3c3f;
+$gray-btn-background-color-deep: #34363a;
+$gray-btn-color: #fff;
+$gray-btn-border-color: #1da9d3;
+//white btn
+$white-btn-background-color: #fff;
+$white-btn-background-color-deep: #ddd;
+$white-btn-color: #22c064;
+$white-btn-border-color: #1da9d3;
+//light green btn
+$light-green-btn-background-color: #0ed8a1;
+$light-green-btn-background-color-deep: #18a352;
+$light-green-btn-color: #fff;
+$light-green-btn-border-color: #1da9d3;
+//red btn
+$red-btn-background-color: #ff7979;
+$red-btn-background-color-deep: #F03838;
+$red-btn-color: #fff;
+$red-btn-border-color: #ff7979;
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    &:focus,
+    &:active {
+        outline: none;
+    }
+}
+
+.btn {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 2px;
+    font-size: 14px;
+    color: $default-btn-color;
+    background-color: $default-btn-background-color;
+    /* 样式渐变 */
+    transition: all 2s;
+    -webkit-transition: all 2s;
+    -moz-transition: all 2s;
+    -ms-transition: all 2s;
+    -o-transition: all 2s;
+    text-align: center;
+    &.btn-sm {
+        /* 小号按钮 */
+        font-size: 12px;
+        padding: 3px 10px;
+    }
+    &:hover,
+    &.loading {
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, .15) inset, 0 0 6px rgba(0, 0, 0, .2) inset;
+        background-color: $default-btn-background-color-deep;
+    }
+    &.btn-xx-success {
+        /* btn-success */
+        background-color: $success-btn-background-color;
+        &:hover,
+        &.loading {
+            background-color: $success-btn-background-color-deep;
+        }
+    }
+    &.btn-xx-theme {
+        /* 主题颜色按钮 */
+        color: $theme-btn-color;
+        border-color: $theme-btn-border-color;
+        background-color: $theme-btn-background-color;
+        &:hover,
+        &.loading {
+            background-color: $theme-btn-background-color-deep;
+        }
+    }
+    &.btn-xx-green {
+        /* 绿色按钮 */
+        color: $green-btn-color;
+        border-color: $green-btn-border-color;
+        background-color: $green-btn-background-color;
+        &:hover,
+        &.loading {
+            background-color: $green-btn-background-color-deep;
+        }
+    }
+    &.btn-xx-blue {
+        /* 蓝色按钮 */
+        color: $blue-btn-color;
+        border-color: $blue-btn-border-color;
+        background-color: $blue-btn-background-color;
+        &:hover,
+        &.loading {
+            background-color: $blue-btn-background-color-deep;
+        }
+    }
+    &.btn-xx-skyblue {
+        /* 天蓝色 */
+        color: $skyblue-btn-color;
+        border-color: $skyblue-btn-border-color;
+        background-color: $skyblue-btn-background-color;
+        &:hover,
+        &.loading {
+            background-color: $skyblue-btn-background-color-deep;
+        }
+    }
+    &.btn-xx-red,
+    &.btn-xx-danger {
+        /* 红色按钮 */
+        color: $red-btn-color;
+        border-color: $red-btn-border-color;
+        background-color: $red-btn-background-color;
+        &:hover,
+        &.loading {
+            background-color: $red-btn-background-color-deep;
+        }
+    }
+    &.btn-xx-gray {
+        /* 灰色 */
+        color: $gray-btn-color;
+        border-color: $gray-btn-border-color;
+        background-color: $gray-btn-background-color;
+        &:hover,
+        &.loading {
+            background-color: $gray-btn-background-color-deep;
+        }
+    }
+    &.btn-xx-white {
+        /* 白色 */
+        color: $white-btn-color;
+        border-color: $white-btn-border-color;
+        background-color: $white-btn-background-color;
+        &:hover,
+        &.loading {
+            background-color: $white-btn-background-color-deep;
+        }
+    }
+    &.btn-xx-light-green {
+        /* 淡绿色 */
+        color: $light-green-btn-color;
+        border-color: $light-green-btn-border-color;
+        background-color: $light-green-btn-background-color;
+        &:hover,
+        &.loading {
+            background-color: $light-green-btn-background-color-deep;
+        }
+    }
+    &.btn-hollow-blue {
+        /* 边框蓝色，内部透明 */
+        background-color: transparent;
+        border-radius: 4px;
+        border: 1px solid $blue-btn-border-color;
+        color: $blue-btn-border-color;
+        &:hover,
+        &.loading {
+            border-color: $blue-btn-background-color-deep;
+            color: $blue-btn-background-color-deep;
+        }
+    }
+    &.btn-xx-hollow-blue {
+        /* 边框蓝色，内部透明 */
+        background-color: transparent;
+        border-radius: 4px;
+        border: 1px solid $blue-btn-border-color;
+        color: $blue-btn-border-color;
+        &:hover,
+        &.loading {
+            border-color: $blue-btn-background-color-deep;
+            color: $blue-btn-background-color-deep;
+        }
+    }
+    &.btn-xx-sm {
+        font-size: 12px;
+        padding: 3px 10px;
+    }
+    &.btn-large {
+        /* 宽度满屏 无圆角 */
+        width: 100%;
+        border-radius: 0;
+    }
+    &.btn-empty {
+        border: none;
+        background-color: transparent;
+        color: #fff;
+    }
+}
+
+.btn.disabled,
+.btn[disabled] {
+    cursor: not-allowed;
+    filter: alpha(opacity=65);
+    box-shadow: none;
+    opacity: .65;
+}
+
+
+/** * 系统中一些其他按钮的样式
+* 建议之后尽量使用统一使用样式名 btn-xx-ooo, * 如果定义为 btn-success 会与 bootstrap 样式冲突，虽然我们暂时前端没用 bootstrap 框架
+* 以便统一管理 */
+
+.btn-lg {
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+.btn-normal {
+    font-size: 14px;
+    padding: 6px 12px;
+}
+
+.btn-sm {
+    font-size: 12px;
+    padding: 4px 10px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: $primary-color;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: $success-color;
+    &:hover {
+        background-color: $deep-success-color;
+    }
+    &.active {
+        background-color: $deep-success-color;
+    }
+}
+
+.btn-info {
+    color: #fff;
+    background-color: $info-color;
+}
+
+.btn-warning {
+    color: #fff;
+    background-color: $warning-color;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: $danger-color;
+    &:hover {
+        background-color: $deep-danger-color;
+    }
+    &.active {
+        background-color: $deep-danger-color;
+    }
+}
+
+
+/** * 与后台交互的按钮一律采用如下 DOM 格式
+* 方便在按钮触发事件里统一处理按钮
+*
+*
+<button class="btn btn-xx-green">
+	*
+	<span class="inside-loading">
+		* <i class="fa fa-spinner rolling"></i>
+		* 		loading…
+*
+	</span>
+	*
+	<span class="inside-text">
+		* 		click me to talk with daemon
+*
+	</span>
+	*
+</button>
+*/
+
+button {
+    .inside-loading {
+        display: none;
+    }
+    .inside-else {
+        display: none;
+    }
+    .inside-text {
+        display: inline-block;
+    }
+    &.loading {
+        .inside-loading {
+            display: inline-block;
+        }
+        .inside-text {
+            display: none;
+        }
+        .inside-else {
+            display: none;
+        }
+    }
+    &.else {
+        .inside-loading {
+            display: none;
+        }
+        .inside-text {
+            display: none;
+        }
+        .inside-else {
+            display: inline;
+        }
+    }
+}

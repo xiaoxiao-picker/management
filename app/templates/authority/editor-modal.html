@@ -1,0 +1,27 @@
+<div class="auth-editor-modal">
+	<div class="row">
+		<h4>权限code</h4>
+		<div class="form-group">
+			<input id="Code" class="form-control" value="{{code}}" placeholder="请输入权限唯一标记" />
+		</div>
+	</div>
+	<div class="row">
+		<h4>权限名称</h4>
+		<div class="form-group">
+			<input id="Name" class="form-control" value="{{name}}" placeholder="请输入权限名称" />
+		</div>
+	</div>
+	<div class="row">
+		<h4>权限描述</h4>
+		<div class="form-group">
+			<textarea id="Remark" class="form-control" rows="5" placeholder="请输入权限描述">{{remark}}</textarea>
+		</div>
+	</div>
+	<div class="row buttons center">
+		<button class="btn btn-xx-green btn-save" data-xx-action="save" data-value="{{isUpdate}}">
+			<span class="inside-loading"> <i class="fa fa-spinner rolling font-14"></i>
+			</span>
+			<span class="inside-text">保存</span>
+		</button>
+	</div>
+</div>

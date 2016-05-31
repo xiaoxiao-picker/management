@@ -1,0 +1,200 @@
+.font-12 {
+	font-size: 12px;
+}
+.font-14 {
+	font-size: 14px;
+}
+.font-16 {
+	font-size: 16px;
+}
+.font-18 {
+	font-size: 18px;
+}
+.font-20 {
+	font-size: 20px;
+}
+.font-24 {
+	font-size: 24px;
+}
+.width-40 {
+	width: 40px;
+}
+.width-50 {
+	width: 50px;
+}
+.width-60 {
+	width: 60px;
+}
+.width-70 {
+	width: 70px;
+}
+.width-80 {
+	width: 80px;
+}
+.width-90 {
+	width: 90px;
+}
+.width-100 {
+	width: 100px;
+}
+.width-110 {
+	width: 110px;
+}
+.width-120 {
+	width: 120px;
+}
+.width-130 {
+	width: 130px;
+}
+.width-140 {
+	width: 140px;
+}
+.width-150 {
+	width: 150px;
+}
+.width-160 {
+	width: 160px;
+}
+.width-170 {
+	width: 170px;
+}
+.width-180 {
+	width: 180px;
+}
+.width-200 {
+	width: 200px;
+}
+.width-250 {
+	width: 250px;
+}
+.width-300 {
+	width: 300px;
+}
+.width-350 {
+	width: 350px;
+}
+.width-400 {
+	width: 400px;
+}
+.width-800 {
+	width: 800px !important;
+}
+
+.text-green {
+	color: $success-color;
+}
+.text-blue {
+	color: $primary-color;
+}
+.text-red {
+	color: $danger-color;
+}
+.text-gray {
+	color: $gray-title-color;
+}
+.xx-blur {
+	filter: url(blur.svg#blur); /* FireFox, Chrome, Opera */
+	-webkit-filter: blur(10px); /* Chrome, Opera */
+	-moz-filter: blur(10px);
+	-ms-filter: blur(10px);
+	filter: blur(10px);
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false); /* IE6~IE9 */
+}
+
+/** * 图片背景
+* 由于经常忘掉顺序，所以都赖一遍吧 */
+.image-back, .back-image {
+	background-size: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+// 清除浮动
+.clearfix {
+	overflow: hidden;
+	&:before, &:after {
+		content: " ";
+		display: table;
+	}
+}
+.pull-left {
+	float: left;
+}
+.pull-right {
+	float: right;
+}
+.hide {
+	display: none !important;
+}
+.star {
+	color: red;
+}
+.blur {
+	filter: url(blur.svg#blur); /* FireFox, Chrome, Opera */
+	-webkit-filter: blur(20px); /* Chrome, Opera */
+	-moz-filter: blur(20px);
+	-ms-filter: blur(20px);
+	filter: blur(20px);
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=20, MakeShadow=false); /* IE6~IE9 */
+}
+.image-shadow {
+	background-image: url(../images/shadow.png);
+	background-repeat: no-repeat;
+	background-repeat-y: repeat;
+	background-position: 0 0;
+	background-size: 100% 100%;
+}
+//超出内容区域省略号
+.ellipsis {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+// 页面内登陆跳转
+.login-wrapper {
+	line-height: 60px;
+	text-align: center;
+	background-color: #22c064;
+	color: #fff;
+}
+
+/** * 列表页暂无数据 */
+.g-empty-wrapper {
+	text-align: center;
+	display: block;
+	line-height: 40px;
+	color: #aaa;
+	font-size: 14px;
+	text-shadow: 0px 0px 2px #fff;
+}
+.empty-wrapper {
+	.empty-header {
+		width: 100%;
+		height: auto;
+	}
+	.empty-body {
+		display: block;
+		max-width: 60%;
+		height: auto;
+		margin: 80px auto 0;
+	}
+}
+
+.center {
+	text-align: center;
+}
+
+.form-group {
+	margin-bottom: 15px;
+}
+
+.search-xx-input {
+	.input-group-btn {
+		line-height: 34px;
+		.btn-default {
+			padding: 6px 12px;
+			border: 1px solid #ccc;
+			border-radius: 0 4px 4px 0;
+		}
+	}
+}

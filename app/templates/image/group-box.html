@@ -1,0 +1,13 @@
+<ul class="group-box">
+    {{each groups as group i}}
+    <li id="Group_{{group.id}}" {{if curGroupId==group.id}}class="active" {{/if}} data-value="{{group.id}}" data-xx-action="selectGroup">
+        <span>{{group.name}}</span> (<span class="group-count">{{group.total}}</span>)
+    </li>
+    {{/each}}
+    <li data-xx-action="modalForAddGroup">
+        <span class="text-red">
+			<i class="fa fa-plus"></i>
+			新建分组
+		</span>
+    </li>
+</ul>

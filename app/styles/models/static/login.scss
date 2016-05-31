@@ -1,0 +1,57 @@
+.bg-image {
+        background-color: #242628;
+        background-size: 100%;
+}
+
+.login-content {
+        margin: 0 auto;
+        width: 590px;
+        text-align: center;
+        margin-top: 10%;
+}
+
+#UserName, #Password {
+        padding: 8px 30px;
+        border: none;
+        outline: none;
+        border-radius: 2px;
+        color: #fff;
+        background: #3c4043;
+        transition: background ease 0.5s;
+        float: left;
+}
+
+#UserName:focus, #Password:focus {
+        background: #4a5054;
+}
+
+.username-wrap, .password-wrap {
+        float: left;
+        position: relative;
+        margin: 0 10px;
+}
+
+.input-icon {
+        position: absolute;
+        left: 10px;
+        top: 8px;
+        color: #a5acae;
+        font-size: 18px !important;
+}
+
+.btn.login-btn {
+        margin-left: 15px;
+        padding: 8px 20px;
+        color: #eee;
+        background-color: rgba(255, 255, 255, 0.1);
+
+        &:hover {
+                color: #fff;
+                background-color: rgba(255, 255, 255, 0.3);
+        }
+}
+
+.login-title {
+        color: #dce3ea;
+        margin-bottom: 40px;
+}

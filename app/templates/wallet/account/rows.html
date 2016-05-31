@@ -1,0 +1,41 @@
+<table class="table table-hover table-main middle center">
+    <thead>
+        <tr>
+            <th class="width-50">#</th>
+            <th>组织</th>
+            <th>账号</th>
+            <th>账号类型</th>
+            <th>申请日期</th>
+            <th class="width-200">操作</th>
+        </tr>
+    </thead>
+    <tbody id="Results">
+        {{each logs as log i}}
+        <tr>
+            <td>
+                <span>{{i | index:pagination.page,pagination.limit}}</span>
+            </td>
+            <td>
+                <span>{{log.org&&log.org.name}}</span>
+            </td>
+            <td>
+                <a href="javascript:void(0);" data-xx-action="showInfo" data-value="{{log.id}}">{{log.account}}</a>
+            </td>
+            <td>
+                <span>{{log.type=='ALIPAY'?'支付宝':'网银'}}</span>
+            </td>
+            <td>
+                <span>{{log.createDate | makedate:'yy年MM月dd日'}}</span>
+            </td>
+            <td>
+                {{if log.state=='UNDEALED'}}
+                <button class="btn btn-xx-sm btn-xx-green" data-value="{{log.id}}" data-xx-action="approve">同意</button>
+                <button class="btn btn-xx-sm btn-xx-red" data-value="{{log.id}}" data-xx-action="reject">拒绝</button>
+                {{else}}
+                <span></span>
+                {{/if}}
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

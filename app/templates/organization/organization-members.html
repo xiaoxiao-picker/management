@@ -1,0 +1,25 @@
+
+<ul class="organization-members clearfix">
+	{{each members as member i}}
+	<li class="member" data-member-id="{{member.id}}" data-member-name="{{member.remark||member.user.name||member.user.nickname||member.user.phoneNumber||'匿名'}}">
+		<div class="user-avatar-wrap">
+			<img class="avatar user-avatar" src="{{member.user.portraitUrl | imageUrl:'@100w_100h_1e_1c'}}" onerror="this.src='./images/default/avatar.jpg'" />
+		</div>
+		<div class="user-content">
+			<header class="member-name ellipsis">{{member.remark||member.user.name||member.user.nickname||member.user.phoneNumber||'匿名'}}</header>
+			<footer>
+				<!-- <button class="btn btn-xx-sm btn-danger btnRemoveAdminRank">
+					<span class="inside-loading"> <i class="fa fa-spinner rolling"></i>
+					</span>
+					<span class="inside-text">删除管理员</span>
+				</button> -->
+				<button class="btn btn-xx-sm btn-danger btnRemoveMemberRank">
+					<span class="inside-loading"> <i class="fa fa-spinner rolling"></i>
+					</span>
+					<span class="inside-text">删除成员</span>
+				</button>
+			</footer>
+		</div>
+	</li>
+	{{/each}}	
+</ul>

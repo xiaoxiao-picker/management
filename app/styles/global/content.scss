@@ -1,0 +1,66 @@
+.viewFramework-product {
+        position: absolute;
+        top: 0px;
+        left: 180px;
+        right: 0;
+        bottom: 0;
+        background-color: #fff;
+        padding: 0 15px;
+        min-width: 1200px;
+
+        .content-header {
+                position: relative;
+                border-bottom: 1px solid $main-background-color;
+
+                .nav.nav-tabs {
+                        // overflow: visible;
+
+                        > li {
+                                float: left;
+                                line-height: 50px;
+                                min-width: 120px;
+                                text-align: center;
+                                border-bottom: 1px solid $main-background-color;
+                                position: relative;
+                                margin-bottom: -1px;
+                                font-size: 16px;
+                                font-weight: bold;
+                                font-family: serif;
+
+                                > a {
+                                        border-radius: 0;
+                                        margin-right: 0;
+                                        border: none;
+                                        padding: 0 15px;
+                                        background-color: #fff;
+                                        line-height: 36px;
+
+                                        &:hover, &:focus {
+                                                background-color: #fff;
+                                        }
+                                }
+
+                                &.active {
+                                        border-color: $theme-color;
+                                }
+                        }
+                }
+
+                .buttons {
+                        position: absolute;
+                        top: 10px;
+                        right: 0;
+                }
+        }
+
+        .content-body {
+                padding: 15px 0;
+
+                a {
+                        color: #5bd18b;
+                }
+        }
+        .content-footer {
+                padding: 15px 0 30px;
+        }
+}

@@ -1,0 +1,21 @@
+.xx-inner-title {
+	font-size: 14px;
+	margin: 0px 0 10px;
+	position: relative;
+	text-align: left;
+	&:before, &:after {
+		content: " ";
+	}
+	&:after {
+		clear: both;
+	}
+	.xx-title {
+		border-left: 4px solid $success-color;
+		padding-left: 5px;
+		margin: 0;
+		margin-right: 15px;
+		font-size: 14px;
+		font-weight: normal;
+		line-height: 14px;
+	}
+}

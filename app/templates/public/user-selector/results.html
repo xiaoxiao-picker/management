@@ -1,0 +1,5 @@
+{{each users as user i}}
+<li class="user ellipsis" data-id="{{user.id}}" data-name="{{user.nickname||user.name||user.phoneNumber||'无昵称'}}">
+	<span>{{user.nickname||user.name||user.phoneNumber||'无昵称'}}</span>
+</li>
+{{/each}}

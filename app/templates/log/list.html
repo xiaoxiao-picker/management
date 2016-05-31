@@ -1,0 +1,39 @@
+<div class="content-header">
+    <ul class="nav nav-tabs clearfix">
+        <li class="active">
+            <span>{{if type == 'EMPLOYEE'}}员工KPI统计{{else}}热度统计{{/if}}</span>
+        </li>
+    </ul>
+    <div class="buttons">
+        <div class="input-group search-xx-input">
+            <select class="form-control target-type" style="width:150px; border-radius: 0;">
+                <option value="">全部模块</option>
+                {{each targets as target i}}
+                <option value="{{target.type}}" {{if targetType==target.type}}selected{{/if}}>{{target.name}}</option>
+                {{/each}}
+            </select>
+            {{if type == 'EMPLOYEE'}}
+            {{else}}
+            <input type="text" class="form-control" style="width:200px;" value="{{organizationId}}" placeholder="选择组织" readonly data-xx-action="selectOrganization" />
+            {{/if}}
+            <input id="StartDate"  name="startDate" type="text" class="datetimepicker form-control" style="width:150px;" value="" placeholder="开始日期" readonly data-targetId="EndDate" data-compare-rule="less" data-compare-tips="活动开始时间不能大于结束时间" />
+            <input id="EndDate" name="endDate" type="text" class="datetimepicker form-control" style="width:150px;" value="" placeholder="结束日期" readonly data-targetId="StartDate" data-compare-rule="more" data-compare-tips="活动结束时间不能小于开始时间" />
+            <span class="input-group-btn">
+                <button class="btn btn-default" data-xx-action="search">
+                <span class="inside-loading">
+                    <i class="fa fa-spinner rolling font-14"></i>
+                </span>
+                <span class="inside-text">
+                    <i class="fa fa-search"></i>
+                </span>
+                </button>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="content-body">
+    <div id="Results">{{include '../public/loading'}}</div>
+</div>
+<div class="content-footer">
+    <!-- 分页 -->
+</div>

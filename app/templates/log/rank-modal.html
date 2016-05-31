@@ -1,0 +1,20 @@
+<section class="log-rank-modal">
+    <div class="rank-box clearfix">
+        {{each targets as target i}}
+        <div class="rank-detail">
+            <div class="title">
+                {{target.name}}
+            </div>
+            <div class="content">
+                {{details[target.type]||0}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    <div class="total">
+        总热度：{{total}}
+    </div>
+    <div class="buttons center">
+        <a class="btn btn-xx-green" href="#log/info?oid={{organizationId}}">查看用户操作记录</a>
+    </div>
+</section>

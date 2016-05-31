@@ -1,0 +1,29 @@
+<div class="content-header">
+	<ul class="nav nav-tabs clearfix">
+		<li class="active">
+			<span>文章列表</span>
+		</li>
+	</ul>
+	<div class="buttons">
+		<div class="input-group search-xx-input">
+			<input id="KW_TITLE" type="text" class="form-control" style="width:200px;" placeholder="标题" />
+			<input type="text" class="form-control" style="width:200px;" value="{{organizationId}}" placeholder="选择组织" readonly data-xx-action="selectOrganization" />
+			<span class="input-group-btn">
+				<button class="btn btn-default" data-xx-action="search">
+				<span class="inside-loading">
+					<i class="fa fa-spinner rolling font-14"></i>
+				</span>
+				<span class="inside-text">
+					<i class="fa fa-search"></i>
+				</span>
+				</button>
+			</span>
+		</div>
+	</div>
+</div>
+<div class="content-body">
+	<div id="ArticlesContainer" class="">{{include '../public/loading'}}</div>
+</div>
+<div class="content-footer">
+    <!-- 分页 -->
+</div>

@@ -1,0 +1,20 @@
+<!-- 用户信息弹出层 -->
+<div class="row">
+	<div class="col-xs-6">
+		<img class="user-avatar rect-80x80" src="{{user.portraitUrl}}" alt="{{user.name||user.nickname||user.tel}}" onerror="this.src='./../images/default/avatar.jpg';"/>
+	</div>
+	<div class="col-xs-6">
+		<span>真实名称：</span>
+		<span>{{user.name}}</span>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-6">
+		<span>手机号码：</span>
+		<span>{{user.tel}}</span>
+	</div>
+	<div class="col-xs-6">
+		<span>昵称：</span>
+		<span>{{user.nickname}}</span>
+	</div>
+</div>

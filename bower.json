@@ -1,0 +1,13 @@
+{
+	"name": "management",
+	"private": true,
+	"appPath": "app",
+	"dependencies": {
+		"modernizr": "~2.8.2",
+		"seajs": "git@github.com:seajs/seajs.git",
+		"seajs-css": "git@github.com:seajs/seajs-css.git",
+		"store": "git@github.com:marcuswestin/store.js.git",
+		"jquery": "~1.11.1",
+		"font-awesome": "git@github.com:FortAwesome/Font-Awesome.git#4.3.0"
+	}
+}

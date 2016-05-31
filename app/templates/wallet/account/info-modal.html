@@ -1,0 +1,24 @@
+<section class="wallet-account-box">
+	<div class="form-group">
+		<h4>账号名</h4>
+		<div>{{account}}</div>
+	</div>
+	<div class="form-group">
+		<h4>真实姓名</h4>
+		<div>{{userName}}</div>
+	</div>
+	<div class="form-group">
+		<h4>账号类型</h4>
+		<div>{{type=='ALIPAY'?'支付宝':'网银'}}</div>
+	</div>
+	<div class="form-group">
+		<h4>相关证明</h4>
+		<div>
+			{{each photos as photo i}}
+			<div class="form-group">
+				<img src="{{photo}}@400w_1e_1c" title="{{photo}}">
+			</div>
+			{{/each}}
+		</div>
+	</div>
+</section>

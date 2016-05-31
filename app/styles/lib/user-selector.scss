@@ -1,0 +1,42 @@
+.user-selector-box {
+        position: relative;
+
+        input[type=search] {
+                float: left;
+                margin-right: 20px;
+                height: 30px;
+                width: 250px;
+                padding: 0 5px;
+        }
+        label {
+                display: block;
+        }
+
+        .users-box {
+                width: 100%;
+                height: 250px;
+                border: 1px solid #ededed;
+                padding: 10px;
+                margin-top: 10px;
+                overflow: auto;
+
+                .user {
+                        float: left;
+                        width: 33.333%;
+                        line-height: 30px;
+                        height: 30px;
+                        overflow: hidden;
+                        text-align: left;
+                        list-style-type: none;
+                        padding: 0 10px;
+                        cursor: pointer;
+                        font-size: 12px;
+                        transition: all 0.5s;
+
+                        &:hover {
+                                background-color: #293038;
+                                color: #fff;
+                        }
+                }
+        }
+}

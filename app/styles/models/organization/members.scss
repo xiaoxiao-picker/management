@@ -1,0 +1,34 @@
+.organization-members {
+        .member {
+                position: relative;
+                width: 50%;
+                height: 45px;
+                float: left;
+
+                .user-avatar-wrap, .user-content {
+                        position: absolute;
+                        top: 0;
+                }
+
+                .user-avatar-wrap {
+                        left: 0;
+                        width: 45px;
+                        height: 45px;
+
+                        .user-avatar {
+                                width: 100%;
+                                height: 100%;
+                        }
+                }
+
+                .user-content {
+                        left: 50px;
+                        right: 0;
+                }
+
+                .member-name {
+                        height: 20px;
+                        line-height: 20px;
+                }
+        }
+}

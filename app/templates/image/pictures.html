@@ -1,0 +1,50 @@
+{{each pictures as picture i}}
+<div class="wrapper" id="Image_{{picture.id}}">
+	<div class="image-box">
+		<div class="img-wrapper" data-value="{{picture.id}}" data-xx-action="">
+			{{if code=='ICON_FLAT'||code=='ICON_REAL'||code=='ICON_LOTTERY'}}
+			<img class="picture" src="{{picture.url}}" />
+			{{else}}
+			<img class="picture" src="{{picture.url | imageUrl:'@170w_150h_1e_1l'}}" />
+			{{/if}}
+			<img class="load-img" src="./images/spinner.gif"/>
+		</div>
+		<label class="title-wrapper ellipsis" title="{{picture.name||picture.fileName}}" data-xx-change-action="selectImage">
+			<input type="checkbox" class="xx-option-input xx-checkbox" name="imageOption" value="" data-value="{{picture.id}}"/>
+			<span class="input-text">{{picture.name||picture.fileName}}</span>
+		</label>
+		<ul class="options clearfix">
+			<li>
+				<button class="btn-edit" data-value="{{picture.id}}" data-xx-action="modalForRenamePic" title="编辑名称">
+					<span class="inside-loading">
+						<i class="fa fa-spinner rolling font-14"></i>
+					</span>
+					<span class="inside-text">
+						<i class="fa fa-pencil"></i>
+					</span>
+				</button>
+			</li>
+			<li>
+				<button class="btn-move" data-value="{{picture.id}}" data-xx-action="modalForMoveImage" title="移动分组">
+					<span class="inside-loading">
+						<i class="fa fa-spinner rolling font-14"></i>
+					</span>
+					<span class="inside-text">
+						<i class="fa fa-exchange"></i>
+					</span>
+				</button>
+			</li>
+			<li>
+				<button class="btn-remove" data-value="{{picture.id}}" data-xx-action="removeImage" title="删除图片">
+					<span class="inside-loading">
+						<i class="fa fa-spinner rolling font-14"></i>
+					</span>
+					<span class="inside-text">
+						<i class="fa fa-trash"></i>
+					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>
+{{/each}}

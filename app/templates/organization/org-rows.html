@@ -1,0 +1,63 @@
+<div class="table-container">
+	<table class="table table-hover table-main middle center">
+		<thead>
+			<tr>
+				<th class="width-50">序号</th>
+				<th class="width-80">二维码</th>
+				<th>组织名</th>
+				<th class="width-80">类型</th>
+				<th class="width-150">所属学校</th>
+				<th class="width-150">入驻时间</th>
+				<th class="width-150">微信号</th>
+				<th class="width-200">操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{each orgs as org i}}
+			<tr>
+				<td>
+					<div class="ellipsis">
+						{{i | index:pagination.page,pagination.limit}}
+					</div>
+				</td>
+				<td>
+					<span class="fa fa-qrcode" data-xx-action="checkQRCode" data-name="{{org.name}}微首页" data-url="http://front.xiaoxiao.la/index.html#organization/{{org.id}}/index"></span>
+				</td>
+				<td class="left">
+					<div class="ellipsis ">
+						<a href="http://front.xiaoxiao.la/index.html#organization/{{org.id}}/index" title="{{org.name||'未命名'}}" target="_blank">{{org.name||"未命名"}}</a>
+					</div>
+				</td>
+				<td>
+					<div class="ellipsis ">
+						<span>{{org.orgType||"未设置"}}</span>
+					</div>
+				</td>
+				<td>
+					<div class="ellipsis ">
+						<span>{{if org.school}}{{org.school.name}}{{else}}暂无{{/if}}</span>
+					</div>
+				</td>
+				<td>
+					<div class="ellipsis">
+						<span>{{org.createDate | makedate:'yyyy年MM月dd日'}}</span>
+					</div>
+				</td>
+				<td>
+					<div class="ellipsis">
+						<span>{{org.wechatId||"未绑定"}}</span>
+					</div>
+				</td>
+				<td>
+					<button class="btn btn-xx-green btn-xx-sm" data-value="{{org.id}}" data-xx-action="checkAdministrators">
+						查看管理员
+					</button>
+					<button class="btn btn-xx-green btn-xx-sm" data-value="{{org.id}}" data-xx-action="addAdministrator">
+						添加管理员
+					</button>	
+				</td>
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
+</div>

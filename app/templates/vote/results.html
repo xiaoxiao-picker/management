@@ -1,0 +1,48 @@
+<div class="table-container">
+	<table class="table table-hover table-main middle center">
+		<thead>
+			<tr>
+				<th class="width-60">#</th>
+				<th class="width-100">二维码</th>
+				<th>标题</th>
+				<th class="width-150">开始日期</th>
+				<th class="width-150">结束日期</th>
+				<th class="width-100">状态</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{each votes as vote i}}
+			<tr>
+				<td>
+					<div class="ellipsis">{{i | index:pagination.page,pagination.limit}}</div>
+				</td>
+				<td>
+					<span class="fa fa-qrcode" data-xx-action="checkQRCode" data-name="{{vote.name}}" data-url="http://front.xiaoxiao.la/index.html#organization/{{vote.organizationId}}/vote/{{vote.id}}/info"></span>
+				</td>
+				<td class="left">
+					<div class="ellipsis">
+						<a href="http://front.xiaoxiao.la/index.html#organization/{{vote.organizationId}}/vote/{{vote.id}}/info" title="{{vote.name}}" target="_blank">{{vote.name}}</a>
+					</div>
+				</td>
+				<td>
+					<div class="ellipsis">
+						<span>{{vote.startDate | makedate:'MM月dd日'}}</span>
+					</div>
+				</td>
+				<td>
+					<div class="ellipsis">
+						<span>{{vote.endDate | makedate:'MM月dd日'}}</span>
+					</div>
+				</td>
+				<td>
+					{{if vote.state=="OPEN"}}
+					<span class="label label-success label-sm" title="开启">开启</span>
+					{{else}}
+					<span class="label label-danger label-sm" title="关闭">关闭</span>
+					{{/if}}
+				</td>
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
+</div>

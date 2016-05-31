@@ -1,0 +1,14 @@
+{{each organizations as organization i}}
+{{if optionLimit == 1}}
+<li class="organization ellipsis" data-id="{{organization.id}}" data-name="{{organization.name}}">
+	<span>{{organization.name||'未命名'}}</span>
+</li>
+{{else}}
+<li class="organization" title="{{organization.name||'未命名'}}">
+	<label for="{{organization.id}}">
+		<input type="checkbox" class="name ellipsis" id="{{organization.id}}" name="organization" data-id="{{organization.id}}" data-name="{{organization.name}}" />
+		{{organization.name||'未命名'}}
+	</label>
+</li>
+{{/if}}
+{{/each}}

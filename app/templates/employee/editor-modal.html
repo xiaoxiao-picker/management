@@ -1,0 +1,30 @@
+<section class="employee-editor-modal">
+	<form>
+		<div class="row">
+			<h5>姓名</h5>
+			<div class="form-group">
+				<input id="" class="form-control" name="name" value="{{name}}" placeholder="" />
+			</div>
+		</div>
+		<div class="row">
+			<h5>手机</h5>
+			<div class="form-group">
+				<input id="" class="form-control" name="phoneNumber" value="{{contactInfo.phoneNumber}}" placeholder="" />
+			</div>
+		</div>
+		<div class="row">
+			<h5>入职日期</h5>
+			<div class="form-group">
+				<input id="" class="form-control datetimepicker" name="entryDate" value="{{entryDate | makedate:'yyyy/MM/dd'}}" placeholder="" readonly />
+			</div>
+		</div>
+		<div class="row buttons center">
+			<button class="btn btn-xx-green btn-save">
+				<span class="inside-loading"> 
+					<i class="fa fa-spinner rolling font-14"></i>
+				</span>
+				<span class="inside-text">保存</span>
+			</button>
+		</div>
+	</form>
+</section>

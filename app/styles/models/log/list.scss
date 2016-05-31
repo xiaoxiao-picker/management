@@ -1,0 +1,31 @@
+.log-table-container {
+	.table {
+		float: left;
+		width: 45%;
+		margin: 0 2.5%;
+		td {
+			padding: 12px 6px;
+		}
+	}
+}
+.log-rank-modal {
+	.rank-detail {
+		float: left;
+		width: 33.333%;
+		padding: 8px 5px;
+		text-align: center;
+		border-bottom: 1px solid #ccc;
+		.title {
+			color: $gray-title-color;
+		}
+		.content {
+			font-size: 15px;
+		}
+	}
+	.total {
+		text-align: center;
+		color: $red-color;
+		font-size: 16px;
+		padding: 15px;
+	}
+}
